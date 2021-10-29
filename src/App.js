@@ -9,6 +9,9 @@ import About from "./Components/pages/About/About";
 import Contact from "./Components/pages/Contact/Contact";
 import Registration from "./Components/Form/Registration/Registration";
 import Login from "./Components/Form/Login/Login";
+import Booking from "./Components/pages/Booking/Booking";
+import Footer from "./Components/Footer/Footer";
+import Destination from "./Components/pages/Destination/Destination";
 
 function App() {
   return (
@@ -24,6 +27,12 @@ function App() {
           </Route>
           <Route path="/tours">
             <Tours></Tours>
+          </Route>
+          <Route path="/destination">
+            <Destination></Destination>
+          </Route>
+          <Route path="/booking/:bookingId">
+            <Booking></Booking>
           </Route>
           <Route path="/about">
             <About></About>
@@ -41,6 +50,7 @@ function App() {
             <NotFound></NotFound>
           </Route>
         </Switch>
+        <Footer></Footer>
       </BrowserRouter>
     </div>
   );
