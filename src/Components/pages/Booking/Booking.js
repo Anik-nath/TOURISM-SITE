@@ -17,12 +17,20 @@ const Booking = () => {
   }, []);
 
   return (
-    <div className="mt-5 py-5">
+    <div className="py-5">
+      <div className="container-fluid ">
+        <div className="row pt-5 text-center cover">
+          <div className="col mt-5 text-white pt-5">
+            <h2>Booking Now</h2>
+            <p>Enjoy Your Package</p>
+          </div>
+        </div>
+      </div>
       <Container>
         <div className="row py-5">
-          <div className="col-lg-6">
+          <div className="col-lg-6 col-12 col-md-12 mb-5">
             <h2>{details.name}</h2>
-            <img className="w-100" src={`${details.img}`} alt="" />
+            <img className="w-100 my-3" src={`${details.img}`} alt="" />
             <h2>Overview</h2>
             <p>{details.description}</p>
             <h3>Tour</h3>
@@ -31,8 +39,8 @@ const Booking = () => {
             </p>
             <h3>Package: $ {details.price}</h3>
           </div>
-          <div className="col-lg-6">
-            <form className="border p-3" action="">
+          <div className="col-lg-6 col-12 col-md-12">
+            <form className="shadow p-3" action="">
               <h3>Book Now</h3>
               <div class="form-outline my-4">
                 <label class="form-label" for="form2Example0">

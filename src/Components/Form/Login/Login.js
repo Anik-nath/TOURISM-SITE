@@ -4,10 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
+import useAuth from "../../../Hooks/useAuth";
 library.add(fab);
 
 const Login = () => {
-  const { user, signInWithGoogle } = useFirebase();
+  const { signInWithGoogle } = useAuth();
   return (
     <div>
       <div className="container">

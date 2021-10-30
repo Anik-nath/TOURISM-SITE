@@ -12,10 +12,13 @@ import Login from "./Components/Form/Login/Login";
 import Booking from "./Components/pages/Booking/Booking";
 import Footer from "./Components/Footer/Footer";
 import Destination from "./Components/pages/Destination/Destination";
+import Authprovider from "./Components/Context.js/Authprovider";
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
     <div className="App">
+      <Authprovider>
       <BrowserRouter>
         <Header></Header>
         <Switch>
@@ -31,9 +34,9 @@ function App() {
           <Route path="/destination">
             <Destination></Destination>
           </Route>
-          <Route path="/booking/:bookingId">
+          <PrivateRoute path="/booking/:bookingId">
             <Booking></Booking>
-          </Route>
+          </PrivateRoute>
           <Route path="/about">
             <About></About>
           </Route>
@@ -52,6 +55,7 @@ function App() {
         </Switch>
         <Footer></Footer>
       </BrowserRouter>
+      </Authprovider>
     </div>
   );
 }
