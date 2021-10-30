@@ -7,7 +7,7 @@ const DestinationCard = (props) => {
     <div>
       <Col>
         <Card>
-          <div className="image-container">
+          <div className="image-container h-100">
             <Card.Img variant="top" src={img} />
             <div class="centered"></div>
           </div>

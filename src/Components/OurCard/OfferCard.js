@@ -28,7 +28,7 @@ const OfferCard = (props) => {
           <Card.Footer className="d-flex justify-content-between bg-info">
             <div>
               <small className="text-white h6">
-                Package: $<strike className="text-danger">1500 </strike>
+                Package: $<strike className="text-danger">6000 </strike>
                {price}
               </small>
             </div>

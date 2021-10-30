@@ -34,7 +34,8 @@
 }
 .brand{
   font-weight: bold;
-  font-size: 26px !important;
+  font-size: 28px !important;
+  color: navy !important;
 }
 .cover{
   background: url('./images/banner-1.jpg');
@@ -52,20 +53,12 @@
   position: relative;
   text-align: center;
   color: white;
+  height: 220px;
 }
-.image-container .centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  background-color: rgba(166, 187, 248, 0.11);
+.image-container img{
   height: 100%;
-  display: none;
 }
-.image-container:hover .centered{
-display: block;
-}
+
 .why{
   background: url('./images/map.png');
   background-size: cover;
@@ -75,8 +68,9 @@ display: block;
   color: #fff;
 }
 .ourButton{
-  background-color: #ccc;
+  background-color:rgba(0, 0, 128, 0.952);
   border-radius: 30px;
   border:none;
   outline: none;
+  color: #fff !important;
 }

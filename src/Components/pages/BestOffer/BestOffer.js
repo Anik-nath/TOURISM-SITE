@@ -9,7 +9,7 @@ const BestOffer = () => {
     const [tours, setTours] = useState([]);
 
   useEffect(() => {
-    const url = `http://localhost:5000/tours`;
+    const url = `https://glacial-lake-74710.herokuapp.com/tours`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setTours(data));
@@ -23,14 +23,14 @@ const BestOffer = () => {
             </div>
          <Container>
               <Row xs={1} lg={3} md={2} className="g-5 mb-4">
-              {tours.slice(0,4).map((tour) => (
+              {tours.slice(3,7).map((tour) => (
                <OfferCard key={tour._id} tour={tour}></OfferCard>
               ))}
               </Row>
          </Container>
          <div className="py-3 text-center">
             <Link to="/tours">
-            <button className="btn btn-warning OurBtn text-white">All Package</button>
+            <button className="ourButton text-white px-3 py-2">All Package</button>
             </Link>
          </div>
         

@@ -9,7 +9,7 @@ const OurCard = (props) => {
         <Col>
         <Card>
         <Link to={`/booking/${_id}`}>
-        <Card.Img variant="top" src={img} />
+        <Card.Img style={{height:"200px"}} variant="top" src={img} />
         </Link>
           <Card.Body>
             <Card.Title>{name}</Card.Title>

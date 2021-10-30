@@ -8,7 +8,7 @@ const Destination = () => {
     const [destinations, setDestinations] = useState([]);
 
   useEffect(() => {
-    const url = `http://localhost:5000/destinations`;
+    const url = `https://glacial-lake-74710.herokuapp.com/destinations`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setDestinations(data));

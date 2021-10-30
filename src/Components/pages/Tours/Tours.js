@@ -9,7 +9,7 @@ const Tours = () => {
   const [tours, setTours] = useState([]);
 
   useEffect(() => {
-    const url = `http://localhost:5000/tours`;
+    const url = `https://glacial-lake-74710.herokuapp.com/tours`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setTours(data));
