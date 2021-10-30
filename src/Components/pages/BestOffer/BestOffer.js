@@ -22,7 +22,7 @@ const BestOffer = () => {
                 <p>Mollit voluptatem perspiciatis convallis elementum corporis quo veritatis aliquid blandit,<br /> blandit torquent, odit placeat. Adipiscing Nostrum magnis maxime curae placeat.</p>
             </div>
          <Container>
-              <Row xs={1} lg={3} md={2} className="g-5 mb-4">
+              <Row xs={1} lg={3} md={2} className="mb-4">
               {tours.slice(3,7).map((tour) => (
                <OfferCard key={tour._id} tour={tour}></OfferCard>
               ))}

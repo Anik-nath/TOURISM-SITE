@@ -30,7 +30,7 @@ const Tours = () => {
         </Spinner>
       ) : (
         <Container className="py-5">
-          <Row sm={2} md={3} xs={1} lg={3} className="g-5">
+          <Row sm={2} md={3} xs={1} lg={3}>
             {tours.map((tour) => (
               <OurCard key={tour._id} tour={tour}></OurCard>
             ))}
