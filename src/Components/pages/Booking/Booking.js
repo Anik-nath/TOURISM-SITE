@@ -20,7 +20,7 @@ const Booking = () => {
   // handle booking form
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = data => {
-    axios.post('http://localhost:5000/booked',data)
+    axios.post('https://glacial-lake-74710.herokuapp.com/booked',data)
     .then(res=>{
       if(res.data.insertedId){
         alert('Succesfuly Booking');

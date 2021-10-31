@@ -7,13 +7,14 @@ import Tours from "./Components/pages/Tours/Tours";
 import NotFound from "./Components/pages/NotFound/NotFound";
 import About from "./Components/pages/About/About";
 import Contact from "./Components/pages/Contact/Contact";
-import Registration from "./Components/Form/Registration/Registration";
 import Login from "./Components/Form/Login/Login";
 import Booking from "./Components/pages/Booking/Booking";
 import Footer from "./Components/Footer/Footer";
 import Destination from "./Components/pages/Destination/Destination";
 import Authprovider from "./Components/Context.js/Authprovider";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
+import ManageBooking from "./Components/pages/ManageBooking/ManageBooking";
+
 
 function App() {
   return (
@@ -43,8 +44,8 @@ function App() {
           <Route path="/contact">
             <Contact></Contact>
           </Route>
-          <Route path="/registration">
-            <Registration></Registration>
+          <Route path="/manage">
+            <ManageBooking></ManageBooking>
           </Route>
           <Route path="/login">
             <Login></Login>

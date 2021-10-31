@@ -29,8 +29,8 @@ const Header = () => {
               <Nav.Link as={HashLink} to="/contact">
                 CONTACT.
               </Nav.Link>
-              <Nav.Link as={HashLink} to="/registration">
-                Registration
+              <Nav.Link as={HashLink} to="/manage">
+                MANAGE
               </Nav.Link>
             </Nav>
             <Navbar.Text className="d-flex align-items-center"> 
