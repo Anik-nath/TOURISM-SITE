@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
-import { Container } from "react-bootstrap";
 import Banner from "../../Header/banner/Banner";
+import service1 from "../../../../src/images/service1.png"
+import service2 from "../../../../src/images/service2.png"
+import service3 from "../../../../src/images/service3.png"
 import BestOffer from "../BestOffer/BestOffer";
 import Why from "../Why/Why";
 import Aos from "aos";
@@ -20,7 +22,7 @@ const Home = () => {
             <div className="border rounded text-secondary">
               <div className="card-body">
                 <img
-                  src="http://www.nicdarkthemes.com/themes/love-travel/html/demo/img/service/service1.png"
+                  src={service1}
                   alt=""
                 />
                 <h4 className="">ADVENTURE</h4>
@@ -32,7 +34,7 @@ const Home = () => {
             <div className="border rounded text-secondary">
               <div className="card-body">
                 <img
-                  src="http://www.nicdarkthemes.com/themes/love-travel/html/demo/img/service/service2.png"
+                  src={service2}
                   alt=""
                 />
                 <h4 className="">RELAX</h4>
@@ -44,7 +46,7 @@ const Home = () => {
             <div className="border rounded text-secondary">
               <div className="card-body">
                 <img
-                  src="http://www.nicdarkthemes.com/themes/love-travel/html/demo/img/service/service3.png"
+                  src={service3}
                   alt=""
                 />
                 <h4 className="">HONEYMOON</h4>
