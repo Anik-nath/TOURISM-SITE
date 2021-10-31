@@ -74,3 +74,6 @@
   outline: none;
   color: #fff !important;
 }
+.info{
+  overflow-x: auto;
+}

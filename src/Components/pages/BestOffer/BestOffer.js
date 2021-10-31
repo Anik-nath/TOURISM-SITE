@@ -23,7 +23,7 @@ const BestOffer = () => {
             </div>
          <Container>
               <Row xs={1} lg={3} md={2} className="mb-4">
-              {tours.slice(3,7).map((tour) => (
+              {tours.slice(1,7).map((tour) => (
                <OfferCard key={tour._id} tour={tour}></OfferCard>
               ))}
               </Row>

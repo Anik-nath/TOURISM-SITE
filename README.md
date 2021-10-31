@@ -1,7 +1,24 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-https://travel-site-4b05c.web.app/destination
+visit our site   https://travel-site-4b05c.web.app/
+
+how to make this site : 
+
+* Use react for front-end
+* use react bootstrap for responsive 
+* use react router for routing page
+* use firebase for authentication
+* use EXPRESS, MONGODB database
+* which we provide pages are:
+  * home
+  * about
+  * tours
+  * destination
+  * contact
+  * manage booking
+* Some modifaciton coming soon...
+
+
 
 ## Available Scripts
 

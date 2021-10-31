@@ -5,11 +5,14 @@ import "./ManageBook.css";
 
 const ManageBooking = () => {
   const [manage, setManage] = useState([]);
+
   useEffect(() => {
     fetch("https://glacial-lake-74710.herokuapp.com/booked")
       .then((res) => res.json())
       .then((data) => setManage(data));
   }, []);
+
+
   return (
     <div className="booking-title">
       <div className="container-fluid ">

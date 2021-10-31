@@ -10,7 +10,7 @@ const Banner = () => {
            <img src={banner1} alt="" /> 
            <div className="title">
                <h1 className="display-2">YOUR BEST TRIP</h1>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+               <p>Choose your next domestic get-away from more than 6000 local accommodation offerings. Personalize your accommodation and flights to suit your individual needs perfectly.</p>
                <Link to="/about">
                 <button className="btn btn-outline-light px-4">About Us</button> 
                </Link>

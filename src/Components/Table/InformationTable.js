@@ -1,9 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Table.css";
 
 const InformationTable = (props) => {
   const { fullname,date,bookingId,email,ticket } = props.manage;
+
   return (
     <>
       <tr>
