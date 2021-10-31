@@ -10,7 +10,7 @@ const OfferCard = (props) => {
         <Card className="shadow">
             <div className="image-container">
               <Card.Img variant="top" src={img} />
-              <div class="centered"></div>
+              <div className="centered"></div>
             </div>
           <Card.Body className="text-center">
             <Card.Title>{name}</Card.Title>

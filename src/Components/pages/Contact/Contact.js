@@ -17,45 +17,45 @@ const Contact = () => {
           <div className="col">
             <form className="w-50 mx-auto shadow p-3">
                 <h3>Send Your Message</h3>
-              <div class="form-outline my-4">
-                <label class="form-label" for="form4Example1">
+              <div className="form-outline my-4">
+                <label className="form-label" for="form4Example1">
                   Name
                 </label>
-                <input type="text" id="form4Example1" class="form-control" />
+                <input type="text" id="form4Example1" className="form-control" />
               </div>
 
-              <div class="form-outline mb-4">
-                <label class="form-label" for="form4Example2">
+              <div className="form-outline mb-4">
+                <label className="form-label" for="form4Example2">
                   Email address
                 </label>
-                <input type="email" id="form4Example2" class="form-control" />
+                <input type="email" id="form4Example2" className="form-control" />
               </div>
 
-              <div class="form-outline mb-4">
-                <label class="form-label" for="form4Example3">
+              <div className="form-outline mb-4">
+                <label className="form-label" for="form4Example3">
                   Message
                 </label>
                 <textarea
-                  class="form-control"
+                  className="form-control"
                   id="form4Example3"
                   rows="4"
                 ></textarea>
               </div>
 
-              <div class="form-check d-flex justify-content-center mb-4">
+              <div className="form-check d-flex justify-content-center mb-4">
                 <input
-                  class="form-check-input me-2"
+                  className="form-check-input me-2"
                   type="checkbox"
                   value=""
                   id="form4Example4"
                   checked
                 />
-                <label class="form-check-label" for="form4Example4">
+                <label className="form-check-label" for="form4Example4">
                   Send me a copy of this message
                 </label>
               </div>
 
-              <button type="submit" class="btn btn-primary w-100 mb-4">
+              <button type="submit" className="btn btn-primary w-100 mb-4">
                 Send
               </button>
             </form>

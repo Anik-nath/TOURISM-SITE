@@ -3,10 +3,11 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Container } from "react-bootstrap";
 import { useParams } from "react-router";
+import { useForm } from "react-hook-form";
+import axios from "axios";
 
 const Booking = () => {
   const { bookingId } = useParams();
-
   const [details, setDetails] = useState([]);
 
   useEffect(() => {
@@ -16,7 +17,18 @@ const Booking = () => {
       .then((data) => setDetails(data));
   }, []);
 
-  
+  // handle booking form
+  const { register, handleSubmit, reset } = useForm();
+  const onSubmit = data => {
+    axios.post('http://localhost:5000/booked',data)
+    .then(res=>{
+      if(res.data.insertedId){
+        alert('Succesfuly Booking');
+        reset();
+    }
+    })
+  };
+
   return (
     <div className="py-5">
       <div className="container-fluid ">
@@ -40,52 +52,39 @@ const Booking = () => {
             </p>
             <h3>Package: $ {details.price}</h3>
           </div>
+          {/* booking form */}
+
           <div className="col-lg-6 col-12 col-md-12">
-            <form className="shadow p-3" action="">
+            <form onSubmit={handleSubmit(onSubmit)} className="shadow p-3" action="">
               <h3>Book Now</h3>
-              <div class="form-outline my-4">
-                <label class="form-label" for="form2Example0">
-                  Your Fullname
-                </label>
-                <input type="text" id="form2Example0" class="form-control" />
+              <input value={bookingId} {...register("bookingId")} readOnly/>
+              <div className="form-outline my-4">
+                <input type="text" className="form-control" {...register("fullname", { required: true })} />
               </div>
-              <div class="form-outline my-4">
-                <label class="form-label" for="form2Example1">
-                  Email address
-                </label>
-                <input type="email" id="form2Example1" class="form-control" />
+              <div className="form-outline my-4">
+                <input type="email" className="form-control" {...register("email", { required: true })}/>
               </div>
-              <div class="form-outline my-4">
-                <label class="form-label" for="form2Example2">
-                  Phone Number
-                </label>
-                <input type="text" id="form2Example2" class="form-control" />
+              <div className="form-outline my-4">
+                <input type="text" className="form-control" {...register("phone", { required: true })}/>
               </div>
-              <div class="form-outline my-4">
-                <label class="form-label" for="form2Example3">Ticket Types:</label>
-                <select class="form-control" name="carlist" form="carform">
-                  <option selected value="">Choose Type</option>
-                  <option value="saab">Travel With Plane</option>
-                  <option value="opel">Travel With Bus</option>
+              <div className="form-outline my-4">
+                <select className="form-control"  {...register("ticket", { required: true })}>
+                  <option>Choose Type</option>
+                  <option value="Plane">Travel With Plane</option>
+                  <option value="Bus">Travel With Bus</option>
                 </select>
               </div>
-              <div class="form-outline my-4">
-                <label class="form-label" for="form2Example2">
-                  Date
-                </label>
-                <input type="date" className="form-control" />
+              <div className="form-outline my-4">
+                <input type="date" className="form-control"  {...register("date", { required: true })}/>
               </div>
-              <div class="form-outline mb-4">
-                <label class="form-label" for="form4Example3">
-                  Message
-                </label>
+              <div className="form-outline mb-4">
                 <textarea
-                  class="form-control"
-                  id="form4Example3"
+                  className="form-control"
+                  {...register("Message")}
                   rows="4"
                 ></textarea>
               </div>
-              <button type="submit" class="btn btn-primary w-100 mb-4">
+              <button type="submit" className="btn btn-primary w-100 mb-4">
                 BOOK NOW
               </button>
             </form>

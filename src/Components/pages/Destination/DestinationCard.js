@@ -9,7 +9,7 @@ const DestinationCard = (props) => {
         <Card>
           <div className="image-container h-100">
             <Card.Img variant="top" src={img} />
-            <div class="centered"></div>
+            <div className="centered"></div>
           </div>
           <Card.Body>
             <Card.Title>{name}</Card.Title>
