@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Aos from 'aos';
+import "aos/dist/aos.css";
 
 const About = () => {
+  useEffect(()=>{
+    Aos.init({duration:2000});
+  },[]);
+
   return (
     <div>
       <div className="container-fluid ">
@@ -47,7 +53,7 @@ const About = () => {
                 <div className="col-lg-6 col-6 col-md-12"><li className="h5">24/7 Customer Support</li></div>
             </div>
           </Col>
-          <Col className="p-5" xs={12} lg={6} md={12} sm={12}>
+          <Col data-aos="zoom-in" className="p-5" xs={12} lg={6} md={12} sm={12}>
             <img className="w-100" src="https://images.unsplash.com/photo-1604363937376-bde1acf2a658?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80" alt="" />
           </Col>
         </Row>

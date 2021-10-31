@@ -14,6 +14,7 @@ const BestOffer = () => {
       .then((res) => res.json())
       .then((data) => setTours(data));
   }, []);
+
     return (
         <div className="py-5">
             <div className="text-center py-4">

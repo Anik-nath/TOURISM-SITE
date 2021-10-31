@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Card, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Aos from 'aos';
+import "aos/dist/aos.css";
 
 const OurCard = (props) => {
     const {_id,name,daytime,nighttime,price,img} = props.tour;
+
+    useEffect(()=>{
+      Aos.init({duration:1000});
+    },[])
   return (
-    <div>
+    <div data-aos="zoom-in">
         <Col>
-        <Card>
+        <Card className="mb-4">
         <Link to={`/booking/${_id}`}>
         <Card.Img style={{height:"200px"}} variant="top" src={img} />
         </Link>

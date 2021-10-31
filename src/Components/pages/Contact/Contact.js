@@ -18,8 +18,8 @@ const Contact = () => {
       {/* contact field */}
       <div className="container">
         <div className="row py-5">
-          <div className="col">
-            <form className="w-50 mx-auto shadow p-3">
+          <div className="col col-lg-6 mx-auto">
+            <form className="w-100 shadow p-3">
               <h3>Send Your Message</h3>
               <div className="form-outline my-4">
                 <label className="form-label" for="form4Example1">
