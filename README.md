@@ -2,7 +2,14 @@
 
 visit our site   https://travel-site-4b05c.web.app/
 
-how to make this site : 
+Features of this site :
+* This page is built for travellers. Anyone can book ticket and 
+they see booking details and select their booking.
+* Users can sign up by email and password. And also sign in in 
+by email and password or Google.
+* Here site also keep save user order info and in database.
+
+Which technology used : 
 
 * Use react for front-end
 * use react bootstrap for responsive 
